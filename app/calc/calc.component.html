@@ -1,0 +1,20 @@
+<h1>Calculator</h1>
+<div class="form">
+  <form #userform="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="num1">1st Number</label> &nbsp;
+      <input type="text" class="form-control" name="num1" id="num1" [(ngModel)]="data.num1">
+    </div>  <br>
+    <div class="form-group">
+      <label for="num2">2nd Number</label> &nbsp;
+      <input type="text" class="form-control" name="num2" id="num2" [(ngModel)]="data.num2">
+    </div>  <br>
+    <button type="submit" (click)="add()" class="btn">Add</button> &nbsp;
+    <button type="submit" (click)="sub()" class="btn">Subtract</button> &nbsp;
+    <button type="submit" (click)="mult()" class="btn">Multiply</button> &nbsp;
+    <button type="submit" (click)="div()" class="btn">Divide</button>
+    <p>{{num1}}</p>
+  </form>
+  <h3>Result: {{num3}}</h3>
+</div>
+
